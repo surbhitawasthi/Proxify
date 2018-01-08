@@ -1,0 +1,20 @@
+#!/bin/bash
+
+export GIO_EXTRA_MODULES=/usr/lib/x86_64-linux-gnu/gio/modules/
+
+if [ -f ~/".bash_functions" ]; then
+	`cat ".bash_functions" >> ~/".bash_functions"`
+	echo "Setup Done!!!"
+else
+	cp ".bash_functions" ~/
+	
+	snippet="if [ -f ~/.bash_functions ]; then
+    		. ~/.bash_functions
+		fi"
+	`cat $snippet >> ~/.bashrc`
+	echo "Setup Completed!!!"
+fi
+
+cd
+
+. .bashrc
