@@ -1,4 +1,4 @@
-#Instructions:
+# Instructions:
 
 1) Open the terminal and goto the "Distributions_xprox_amd64" directory.
 1) Run this snippet of code on terminal.
